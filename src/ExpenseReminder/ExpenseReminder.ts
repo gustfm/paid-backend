@@ -4,5 +4,6 @@ export class ExpenseReminder {
   public day: number;
   public startMonth: number;
   public endMonth: number;
-  public bills: PaymentBill[];
+  public year: number;
+  public bills!: PaymentBill[];
 }

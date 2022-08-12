@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Post } from '@nestjs/common';
 import { ExpenseReminder } from './ExpenseReminder';
 
 import { ExpenseReminderService } from './ExpenseReminderService';
@@ -10,7 +10,12 @@ export class ExpenseReminderController {
   ) {}
 
   @Get()
-  getAll(): ExpenseReminder[] {
-    return this.expenseReminderService.getAll();
+  getAllRemindersSettings(): ExpenseReminder[] {
+    return this.expenseReminderService.getAllRemindersSettings();
+  }
+
+  @Post()
+  next(): ExpenseReminder {
+    return this.expenseReminderService.createNextReminder();
   }
 }

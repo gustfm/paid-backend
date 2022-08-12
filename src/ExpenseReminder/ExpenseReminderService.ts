@@ -8,9 +8,21 @@ export class ExpenseReminderService {
 
   constructor(collectionManager: CollectionManager<ExpenseReminder[]>) {
     this.collectionManager = collectionManager;
-}
+  }
 
-  public getAll(): ExpenseReminder[] {
-    return this.collectionManager.getAll();
+  public getAllRemindersSettings(): ExpenseReminder[] {
+    const items: ExpenseReminder[] = this.collectionManager.getAll();
+    return items.map((i) => {
+      delete i.bills;
+      return i;
+    });
+  }
+
+  public getLastReminder(): ExpenseReminder {
+    return;
+  }
+
+  public createNextReminder(): ExpenseReminder {
+
   }
 }

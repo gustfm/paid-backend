@@ -3,6 +3,27 @@
     "day": 14,
     "startMonth": 1,
     "endMonth": 2,
+    "year": 2022,
+    "bills": [
+      {
+        "label": "Imposto de renda",
+        "paid": false
+      },
+      {
+        "label": "Pagar conta de luz",
+        "paid": false
+      },
+      {
+        "label": "Pagar conta de internet",
+        "paid": false
+      }
+    ]
+  },
+  {
+    "day": 14,
+    "startMonth": 2,
+    "endMonth": 3,
+    "year": 2022,
     "bills": [
       {
         "label": "Imposto de renda",
